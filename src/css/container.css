@@ -1,0 +1,30 @@
+/* Styles for Mobile devices */
+.cont {
+  /* min-width: 320px;
+  max-width: 375px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 0 16px;
+}
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .cont {
+    max-width: 768px;
+  }
+}
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1200px) {
+  .cont {
+    max-width: 1200px;
+  }
+}
+
+.hero {
+  display: flex;
+
+  text-align: center;
+  margin-bottom: 32px;
+}
