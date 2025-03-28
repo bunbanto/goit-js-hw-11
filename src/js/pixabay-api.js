@@ -7,6 +7,7 @@ const API_KEY = '49548683-ee808159962119513bc31ef98';
 const BASE_URL = 'https://pixabay.com/api/';
 
 export function fetchImages(searchText) {
+  // const randomPage = Math.floor(Math.random() * 50) + 1;
   return axios
     .get(BASE_URL, {
       params: {
@@ -14,6 +15,8 @@ export function fetchImages(searchText) {
         q: searchText,
         image_type: 'photo',
         orientation: 'horizontal',
+        // page: randomPage,
+        per_page: 15,
         safesearch: true,
       },
     })
