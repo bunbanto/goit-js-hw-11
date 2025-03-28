@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { showLoader, hideLoader } from './render-functions.js';
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
@@ -8,6 +9,7 @@ const BASE_URL = 'https://pixabay.com/api/';
 
 export function fetchImages(searchText) {
   // const randomPage = Math.floor(Math.random() * 50) + 1;
+  showLoader();
   return axios
     .get(BASE_URL, {
       params: {
@@ -16,11 +18,12 @@ export function fetchImages(searchText) {
         image_type: 'photo',
         orientation: 'horizontal',
         // page: randomPage,
-        per_page: 15,
+        per_page: '15',
         safesearch: true,
       },
     })
     .then(response => {
+      hideLoader();
       if (response.data.hits.length === 0) {
         iziToast.error({
           message:
@@ -34,6 +37,7 @@ export function fetchImages(searchText) {
       return response.data.hits;
     })
     .catch(error => {
+      hideLoader();
       iziToast.error({
         message:
           'An error occurred while fetching images. Please try again later.',

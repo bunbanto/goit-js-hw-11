@@ -1,6 +1,5 @@
 /* Styles for Mobile devices */
 .container {
-  width: 1440px;
   /* height: 792px; */
   display: flex;
   flex-direction: column;
@@ -18,7 +17,7 @@
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1200px) {
   .cont {
-    max-width: 1200px;
+    max-width: 1128px;
   }
 }
 
@@ -68,6 +67,7 @@
   list-style: none;
   padding: 0;
   margin: 20px;
+  max-width: 1128px;
 }
 
 .gallery-item {
@@ -121,9 +121,9 @@
   box-sizing: border-box;
   animation: shadowPulse 2s linear infinite;
 }
-.hidden {
+/* .loader {
   display: none;
-}
+} */
 @keyframes shadowPulse {
   33% {
     background: #fff;

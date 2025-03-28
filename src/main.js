@@ -5,6 +5,7 @@ import iziToast from 'izitoast';
 
 const form = document.querySelector('.form');
 const gallery = document.querySelector('.gallery');
+//const loader = document.querySelector('.loader');
 
 form.addEventListener('submit', event => {
   event.preventDefault();
@@ -20,9 +21,8 @@ form.addEventListener('submit', event => {
     });
     return;
   }
-
-  gallery.innerHTML = '';
   showLoader();
+  gallery.innerHTML = '';
 
   fetchImages(searchText)
     .then(images => renderGallery(images))

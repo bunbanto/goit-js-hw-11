@@ -2,6 +2,7 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const gallery = document.querySelector('.gallery');
+const loader = document.querySelector('.loader');
 
 export function renderGallery(images) {
   const markup = images
@@ -38,11 +39,10 @@ export function renderGallery(images) {
 
   lightbox.refresh();
 }
-
 export function showLoader() {
-  document.querySelector('.loader').classList.remove('hidden');
+  loader.style.display = 'block';
 }
 
 export function hideLoader() {
-  document.querySelector('.loader').classList.add('hidden');
+  loader.style.display = 'none';
 }
