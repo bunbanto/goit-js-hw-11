@@ -2,17 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>goit-js-hw-11</title>
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/index-Dgd_TBr7.css">
+    <script type="module" crossorigin src="/goit-js-hw-11/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-CZCqCKWq.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/vendor-DumFYO8Z.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/index-Z_YdTkQ1.css">
   </head>
   <body>
-   <main>
-     
+    <main>
+      <section class="container">
+        <form class="form">
+          <label class="search-form">
+            <input
+              class="search-input"
+              type="text"
+              name="search-text"
+              placeholder="Search images..."
+            />
+          </label>
+          <button class="searchbtn" type="submit">Search</button>
+        </form>
+        <div class="loader hidden"></div>
+        <ul class="gallery"></ul>
+      </section>
     </main>
-    </main>
-
-    
   </body>
 </html>
