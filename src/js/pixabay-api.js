@@ -20,7 +20,6 @@ export function fetchImages(searchText) {
     .then(response => {
       if (response.data.hits.length === 0) {
         iziToast.error({
-          title: 'Error',
           message:
             'Sorry, there are no images matching your search query. Please try again!',
           titleColor: '#FFFFFF',
@@ -33,7 +32,6 @@ export function fetchImages(searchText) {
     })
     .catch(error => {
       iziToast.error({
-        title: 'Error',
         message:
           'An error occurred while fetching images. Please try again later.',
         titleColor: '#FFFFFF',

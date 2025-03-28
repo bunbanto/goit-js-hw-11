@@ -20,7 +20,7 @@ export function renderGallery(images) {
         <img src="${webformatURL}" alt="${tags}">
       </a>
       <div class="info">
-        <p><b>👍 Likes:</b> ${likes}</p>
+        <p><b>Likes:</b> ${likes}</p>
         <p><b>Views:</b> ${views}</p>
         <p><b>Comments:</b> ${comments}</p>
         <p><b>Downloads:</b> ${downloads}</p>
@@ -35,6 +35,8 @@ export function renderGallery(images) {
   const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
   });
+
+  lightbox.refresh();
 }
 
 export function showLoader() {

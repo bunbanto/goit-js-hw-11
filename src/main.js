@@ -12,7 +12,6 @@ form.addEventListener('submit', event => {
   const searchText = event.target.elements['search-text'].value.trim();
   if (!searchText) {
     iziToast.error({
-      title: 'Error',
       message: 'Please enter a search term!',
       titleColor: '#FFFFFF',
       messageColor: '#FFFFFF',
