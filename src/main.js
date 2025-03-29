@@ -6,7 +6,7 @@ import iziToast from 'izitoast';
 const form = document.querySelector('.form');
 const gallery = document.querySelector('.gallery');
 //const loader = document.querySelector('.loader');
-
+hideLoader();
 form.addEventListener('submit', event => {
   event.preventDefault();
 
