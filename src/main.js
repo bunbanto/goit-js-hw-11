@@ -1,11 +1,12 @@
 import { fetchImages } from './js/pixabay-api.js';
-import { renderGallery } from './js/render-functions.js';
+import { renderGallery, clearGallery } from './js/render-functions.js';
 import { showLoader, hideLoader } from './js/render-functions.js';
 import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const form = document.querySelector('.form');
 const gallery = document.querySelector('.gallery');
-//const loader = document.querySelector('.loader');
+
 hideLoader();
 form.addEventListener('submit', event => {
   event.preventDefault();
@@ -21,8 +22,9 @@ form.addEventListener('submit', event => {
     });
     return;
   }
+
   showLoader();
-  gallery.innerHTML = '';
+  clearGallery();
 
   fetchImages(searchText)
     .then(images => renderGallery(images))
