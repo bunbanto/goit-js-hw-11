@@ -130,9 +130,7 @@
   box-sizing: border-box;
   animation: shadowPulse 2s linear infinite;
 }
-/* .loader {
-  display: none;
-} */
+
 @keyframes shadowPulse {
   33% {
     background: #fff;

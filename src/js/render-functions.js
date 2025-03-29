@@ -40,9 +40,9 @@ export function renderGallery(images) {
   lightbox.refresh();
 }
 export function showLoader() {
-  loader.style.display = 'block';
+  loader.classList.add('loader');
 }
 
 export function hideLoader() {
-  loader.style.display = 'none';
+  loader.classList.remove('loader');
 }
